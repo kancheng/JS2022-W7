@@ -1,10 +1,45 @@
----
-title: 旅遊套票查詢
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!--
 
+Reference :
+
+1. CSS 現成模版 - CodePen - hexschool : https://codepen.io/hexschool/pen/BaQveVm?editors=1010
+
+2. 流程圖建議 : https://whimsical.com/WZEyuJGJUCLmw9rCEHhPp9
+
+3. 圖片下載連結 : https://github.com/hexschool/2022-web-layout-training/tree/main/js_week5
+
+4. XD 設計稿 : https://xd.adobe.com/view/868fdb37-d3f4-48bd-bdd9-8b2ae7963c9b-d3dc/
+
+5. CodePen - tanxin : https://codepen.io/kancheng/pen/NWzdKge
+
+6. forEach - 範例功能 : https://codepen.io/hexschool/pen/oNYPPPx
+
+- https://codepen.io/kancheng/pen/ZERLamJ
+
+7. axios 文件：https://github.com/axios/axios#example
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旅遊套票查詢</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- axios -->
+    <!-- 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    -->
+</head>
+<body>
+    
 <section class="addTicket-panel">
     <div class="addTicket-img">
         <img src="assets/images/main_img.png" alt="">
@@ -227,3 +262,7 @@ current: index
         <img src="assets/images/no_found.png" alt="">
     </div>
 </section>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+</html>
