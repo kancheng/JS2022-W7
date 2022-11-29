@@ -53,7 +53,7 @@ https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js
 
 4. Rr#2215 : https://codepen.io/rufangcheng/pen/dyKprgx
 
-### Ref. Code W7 :
+## Ref. Code W7 :
 
 - bingsu#2362, LV1, https://codepen.io/pmyfr/pen/BaVPwbm
 
@@ -209,3 +209,121 @@ A: 建議可以查看一下自己的相關版本，以下是專案開發者的�
 - [使用 Gulp 進行網頁前端自動化](https://courses.hexschool.com/p/gulp)
 - [這是在講 Gulp 不是飲料是任務自動化工具這件事](https://hsiangfeng.github.io/tags/%E9%80%99%E6%98%AF%E5%9C%A8%E8%AC%9B-Gulp-%E4%B8%8D%E6%98%AF%E9%A3%B2%E6%96%99%E6%98%AF%E4%BB%BB%E5%8B%99%E8%87%AA%E5%8B%95%E5%8C%96%E5%B7%A5%E5%85%B7%E9%80%99%E4%BB%B6%E4%BA%8B/page/2/)
 - [試著把切版專案升級到 gulp4.0 吧](https://ithelp.ithome.com.tw/users/20104132/ironman/2921)
+
+
+# Note
+
+1. C3 套用
+
+* 範例程式碼 : https://codepen.io/liao/pen/VwzqQrw
+
+- https://codepen.io/kancheng/pen/KKemvpM
+
+* AJAX LV1 JSON+C3 : https://codepen.io/hexschool/pen/VwPwRyd
+
+- https://codepen.io/kancheng/pen/abKWyOE
+
+* C3.js+LV1 AJAX+本地端新增資料 : https://codepen.io/hexschool/pen/ExZxMpv
+
+- https://codepen.io/kancheng/pen/QWxvMjy
+
+2. 其他範例
+
+* 前後端男女性比例 : https://codepen.io/liao/pen/XWaoaxV
+
+- https://codepen.io/kancheng/pen/zYawdvE
+
+* BMI kata 投稿人數折線圖(時間序列折線圖) : https://codepen.io/liao/pen/LYjMjqX
+
+- https://codepen.io/kancheng/pen/dyKWzGg
+
+
+3. Validate.js
+
+- https://quip.com/6wbCAvu5OTmJ/2021-JS-4
+
+- vee-validate : https://vee-validate.logaretm.com/v4/
+
+4. Validate.js
+
+- CDN
+
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+```
+
+- Constraints （約束條件）
+
+```
+{
+    <attribute>: {
+    <validator name>: <validator options>
+    }
+}
+```
+
+- 官網範例：
+
+```
+var constraints = {
+  username: {
+    presence: true,
+    exclusion: {
+      within: ["nicklas"],
+      message: "'%{value}' is not allowed"
+    }
+  },
+  password: {
+    presence: true,
+    length: {
+      minimum: 6,
+      message: "must be at least 6 characters"
+    }
+  }
+};
+
+validate({password: "bad"}, constraints);
+// => {
+//   "username": ["Username can't be blank"],
+//   "password": ["Password must be at least 6 characters"]
+// }
+```
+
+- validate function
+
+```
+validate(attributes, constraints, [options])
+```
+
+- 練習：
+
+```
+<form id="myForm">
+    <input type="text" class="username" name="username">
+    <input type="password" name="password">
+</form>
+```
+
+```
+const form = document.querySelector("#myForm");
+
+...
+
+//{ 
+// "username":["Username can't be blank"], 
+// "password":["Password can't be blank"] 
+//}
+```
+
+
+- 常使用的 Validators
+
+* email 信箱
+* length 長度（名稱最多幾個字、密碼最多或最少幾個字）
+* numericality 數量（大於0 小於10)
+* presence 必填
+* url 網址 （連結、圖片）
+
+- 實作 : https://codepen.io/AliceChiang/pen/MWbBzKo
+
+- https://codepen.io/kancheng/pen/gOKWxKp
